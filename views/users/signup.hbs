@@ -1,0 +1,53 @@
+<style>
+  body {
+    background-image: url('/img/sonrisa.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  }
+</style>
+
+<div class="container text-center" style="width: 25rem;">
+<div class="card bg-transparent">
+<h1 class="funny">SIGN UP</h1>
+<div class="text-white mt-2">
+  <form action="/user/signup" method="POST">
+    <div class="form-group col-auto">
+      <input value="{{email}}" name='email' type="email" class="form-control text-white bg-transparent"
+        id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="email@email.com">
+    </div>
+    <div class="col-auto form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">@</div>
+        </div>
+        <input value="{{user_name}}" name='user_name' type="text" class="form-control text-white bg-transparent"
+          id="inlineFormInputGroup" placeholder="Username">
+      </div>
+    </div>
+    <div class="form-group col-auto text-center">
+      <div class="btn-group btn-group-toggle lg" data-toggle="buttons">
+        <label class="btn btn-secondary active">
+          <input value="man" type="radio" name="gender" id="option1" checked> Man
+        </label>
+        <label class="btn btn-secondary">
+          <input value="woman" type="radio" name="gender" id="option2"> Woman
+        </label>
+        <label class="btn btn-secondary">
+          <input value="other" type="radio" name="gender" id="option3"> Other
+        </label>
+      </div>
+    </div>
+</div>
+<div class="form-group col-auto">
+  <input name='password' type="password" class="form-control text-white bg-transparent" id="exampleInputPassword1"
+    placeholder="Password">
+</div>
+<div class="form-group col-auto">
+  <input name='confirm_password' type="password" class="form-control text-white bg-transparent"
+    id="exampleInputPassword1 " placeholder="Confirm Password">
+</div>
+<button type="submit" class="btn btn-danger btn-block">SignUp</button>
+</form>
+</div>
+</div>

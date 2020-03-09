@@ -1,0 +1,22 @@
+{{#if post}}
+<div class="card bg-dark text-white text-center ml-2 mr-2 mt-2">
+  <h5 class="card-header"><img src="/img/coin.png" class="img-fluid" alt="monedinha">{{post.cost}}</h5>
+  <div class="card-body">
+    <p class="card-text">{{post.text}}</p>
+  </div>
+</div>
+{{/if}}
+
+{{#each answer}}
+<div class="card bg-secondary text-white text-center mt-2 ml-2 mr-2">
+  <h5 class="card-header">@{{courager}}</h5>
+  <div class="card-body">
+    <p class="card-text">{{text}}</p>
+  </div>
+  <form action="/posts/ask/select/{{_id}}" method="POST">
+        <button  type="submit" class="btn btn-danger btn-block mt-3">This is the winner</button> </div>
+    </form>
+</div>    
+{{else}}
+    <h1>There are no answers yet</h1>
+{{/each}}

@@ -1,0 +1,45 @@
+
+<nav class="navbar navbar-lg navbar-dark">
+{{#if user}}
+  <a class="navbar-brand" href="/posts/ask"><img src="/img/logo.png"  alt="main-loginho" height="40" width="100" border="0"></a>
+{{else}}
+  <a class="navbar-brand" href="/"><img src="/img/logo.png"  alt="main-loginho" height="40" width="100" border="0"></a>
+{{/if}}
+  {{#if user}}
+<div class="text-white ">
+    <img src="/img/coin.png" class="img-fluid" alt="monedinha">
+    = {{user.points}}
+</div>
+
+  {{/if}}
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      {{#if user}}
+      <li class="nav-item">
+        <a class="nav-link text-center bg-danger" href="/posts/ask/all">MyQuestions</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link text-center bg-danger" href="/posts/answer">Answer</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-center bg-danger" href="/league">League<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-center bg-danger" href="/user/logout">Logout<span class="sr-only">(current)</span></a>
+      </li>
+
+      {{else}}
+      <li class="nav-item">
+        <a class="nav-link text-center bg-danger" href="/user/signin">Sign In<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-center bg-danger" href="/about">About us</a>
+      </li>
+      {{/if}}
+    </ul>
+  </div>
+</nav>

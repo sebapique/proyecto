@@ -1,0 +1,29 @@
+<div class="text-center">
+  <a class="text-white" href="/posts/ask">
+    <button type="button" class="btn btn-lg btn-outline-light">Ask</button>  
+  </a>
+</div>
+<div class="text-center text-dark bg-light mt-2 mr-2 ml-2">
+  <h1>My questions</h1>
+</div>
+{{#each questions}}
+
+<div class="card mt-2 ml-2 mr-2 text-white bg-dark">
+  <div class="card-body">
+    <h5 ><img src="/img/coin.png" class="img-fluid" alt="monedinha">={{cost}}</img></h5> 
+    <h5 class="float-right"><img src="/img/boy.png" height="35" width="35" class="img-fluid" alt="monedinha">={{number}}</img></h5>
+    <p class="card-text">{{text}}</p>
+    <form action="/posts/ask/{{_id}}" method="POST">
+      <button type="submit" class="btn btn-danger btn-block mt-3">Check out the answers</button>
+  </div>
+  </form>
+</div>
+</div>
+
+{{else}}
+<h1 class="text-center">There are no questions.</h1>
+{{/each}}
+
+<div class="container text-center">
+  <a href="/posts/ask/old"><button type="button" class="btn btn-outline-danger mt-2">Old questions</button></a>
+</div>

@@ -1,0 +1,21 @@
+<div class="card text-center bg-dark text-white">
+  <div class="card-header">
+    Your question
+  </div>
+  <div class="card-body">
+    <p class="card-text">{{question.text}}</p>
+  </div>
+</div>
+
+
+
+{{#each answers}}
+
+
+<div class="card bg-light mb-auto" >
+  <div class="card-header">Header</div>
+  <div class="card-body">
+    <p class="card-text">{{text}}</p>
+  </div>
+</div>
+{{/each}}

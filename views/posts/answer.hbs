@@ -1,0 +1,26 @@
+<div class="text-center ml-2 mr-2 bg-light text-dark">
+<h1>Answer</h1>
+</a>
+</div>
+<div class="alert alert-secondary mt-3 ml-2 mr-2" role="alert">
+  Now answer the questions, keep in mind that the user will decide which is the best question and that user will receive the coins.
+</div>
+ {{#each posts}}
+<div class="card ml-2 mr-2 mt-2 bg-dark text-white">
+
+  <div class="card-body">
+    <div class="text-center">
+    <h5 class="float-left">{{gender}}</h5>
+    <h5 class="float-right"><img src="/img/coin.png" class="img-fluid" alt="monedinha"> = {{cost}}</h5>
+    <p class="card-text">{{text}}</p>
+    </div>
+    <form action="/posts/answer/{{_id}}" method="POST">
+        <button  type="submit" class="btn btn-danger btn-block mt-3">Answer</button> </div>
+    </form>
+  </div>
+</div>
+
+    {{else}}
+        <h1>There are no questions</h1>
+  </div>
+      {{/each}}

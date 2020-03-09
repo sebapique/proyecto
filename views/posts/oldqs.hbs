@@ -1,0 +1,19 @@
+
+<div class="text-center text-dark bg-light mr-2 ml-2">
+<h1 class>My old questions</h1>
+</div>
+{{#each questions}}
+<div class="card mt-2 ml-2 mr-2 text-white bg-dark">
+  <div class="card-body">
+    <h5 class="card-title"><img src="/img/coin.png" class="img-fluid" alt="monedinha">={{cost}}</h5>
+    <p class="card-text">{{text}}</p>
+    <form action="/posts/ask/old/{{id}}" method="POST">
+        <button  type="submit" class="btn btn-danger btn-block mt-3">Open</button> </div>
+    </form>
+  </div>
+</div>
+
+{{else}}
+<h1 class="text-center">You don't have old questions</h1>
+{{/each}}
+

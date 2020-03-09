@@ -1,0 +1,22 @@
+<style>
+  body {
+    background-image: url('/img/compete.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  }
+</style>
+
+<div class="container text-center mt-4">
+    <div class="bg-transparent">
+        <h1 class="funny text-white">Create league</h1>
+        <div class="text-white mt-2">
+            <form action="/league/add" method="POST">
+                <div class="form-group col-auto">
+                    <input value="" name='name' type="name" class="form-control text-white bg-transparent"
+                        id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="League name">
+                </div>
+                <button type="submit" class="btn btn-danger btn-block">Create</button>
+            </form>
+        </div>
+    </div>

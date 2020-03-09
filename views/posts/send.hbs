@@ -1,0 +1,38 @@
+<h1> <span class="badge badge-secondary">Answer.</span></h1>
+<div class="alert alert-dark" role="alert">
+  Answer to his situation. <a href="#" class="alert-link"> Don't forget to ask him to rate you.</a>
+</div>
+      <div class="containter bg-transparent text-white p-3 pt-1">
+        <div class="card text-center bg-dark text-white">
+          <div class="card-header text-white">
+            {{post.gender}} <img src="/img/coin.png" class="img-fluid" alt="monedinha">={{post.cost}}
+          </div>
+          <div class="card-body">
+            <p class="card-text text-white">{{post.text}}</p>
+          </div>
+        </div>
+        <form action="/posts/answer/send/{{post._id}}" method="POST";>
+            <textarea class="form-control bg-transparent text-white mt-4" placeholder="Write your answer" name="answer" rows="5"></textarea>
+            <button type="button" class="btn btn-danger btn-block mt-4" data-toggle="modal" data-target="#exampleModal">Send</button>
+
+<!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content text-white bg-dark">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Are you sure do you want to send?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-danger">Send</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </form>
+      </div>  
+      
+

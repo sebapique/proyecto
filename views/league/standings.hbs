@@ -1,0 +1,23 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">{{league.name}}</h1>
+    <p class="lead">Aqui listan los Couragers con mas respuestas, el orgullo de esta pagina.</p>
+  </div>
+</div>
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">@</th>
+      <th scope="col">Puntaje</th>
+    </tr>
+  </thead>
+  <tbody>
+{{#each league.users}}
+<tr>
+      <td>@{{friend}}</td>
+      <td>{{points}}</td>
+</tr>
+{{/each}}
+</tbody>
+</div>
+</table>

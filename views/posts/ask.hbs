@@ -1,0 +1,29 @@
+
+    <div class="phrase">
+      <h1 class="p-3 mb-2 text-white col-xs-1 " align="center">Time to ask</h1>
+    </div>
+      <div class="container"> 
+        <div id="things" class="subtitle text-white text-center"> <p class="bg-danger">Write your situation below, your identity won't be shown.
+          Add the amount of coins your are willing to give to the winner answer.
+        </p> 
+        
+        <form class ="login" method="POST" action="/posts/send" >  
+              <div class="form-group">
+                <div class="text-center container"><label class="text-white col-md-12 my-auto ">Situation</label></div>
+                <textarea class="form-control bg-transparent text-white mt-1" name="text" rows="7"></textarea>
+                <small id="emailHelp" class="form-text text-muted text-white">Please don't share personal information, our main intention is to protect your privacy.</small>
+              </div>
+              <div class="form-group">
+                <img src="/img/coin.png" class="img-fluid" alt="monedinha"><label for="exampleFormControlSelect1">Cost</label>
+                <select class="form-control bg-transparent text-white" name="cost" id="exampleFormControlSelect1">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                 </select>
+                </div>
+              <button type="submit" id="Buttonid" class="btn btn-danger btn-block mb-4">Send</button>
+              <h4>Not enough coins? Try <a class="text-danger" href="/posts/answer"><button type="button" class="btn btn-danger">Answering</button></a> </h4> 
+        </form>
+     </div>
